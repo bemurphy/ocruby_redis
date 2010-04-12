@@ -73,9 +73,20 @@
 !SLIDE incremental bullets transition=fade
 
 # So what's cool about this?
-* It's very fast.
 * It often closely models our beloved Ruby classes; think Array#pop, shift, +, etc.
 * May require less cognitive overhead for some tasks.
+* It's very fast.
+
+!SLIDE incremental bullets transition=scrollLeft smbullets
+
+# How fast is Redis?
+###*or, why people like Redis
+
+* Tested with redis-benchmark
+* 50 simultaneous clients, 100,000 requests, using loopback
+* SET and GET with 256 bytes string
+* Linux 2.6 on a Xeon X3320 2.5Ghz
+* About 110,000 SETs per second, and 81,000 GETs per second
 
 !SLIDE bullets
 
@@ -97,17 +108,6 @@
 #Client Support
 
 ##**Ruby**, Python, Twisted Python, PHP, Erlang, Tcl, Perl, Lua, Java, Scala, Clojure, C#, C, Javascript/Node.js
-
-!SLIDE incremental bullets transition=scrollLeft smbullets
-
-# How fast is Redis?
-###*or, why people like Redis
-
-* Tested with redis-benchmark
-* 50 simultaneous clients, 100,000 requests, using loopback
-* SET and GET with 256 bytes string
-* Linux 2.6 on a Xeon X3320 2.5Ghz
-* About 110,000 SETs per second, and 81,000 GETs per second
 
 !SLIDE incremental bullets
 

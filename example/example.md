@@ -58,8 +58,7 @@
     # Tracking an Active User
 
     def track_user_id(id)
-      key = current_key
-      redis.sadd(key, id)
+      redis.sadd(current_key, id)
     end
     
     # Don't forget to set a cron and clear out 
