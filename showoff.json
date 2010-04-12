@@ -1,3 +1,6 @@
 [
-  {"section": "intro"}
+  {"section": "intro"},
+  {"section": "redis"},
+  {"section": "ruby"},
+  {"section": "example"}
 ]

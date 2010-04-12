@@ -1,29 +1,16 @@
-!SLIDE
-
-# Redis #
-## A Brief Introduction ##
-
-!SLIDE incremental bullets
-
-# About Me #
-
-* For anyone new, I'm Brendon Murphy
-* http://github.com/bemurphy
-* @xternal twitter
-
 !SLIDE subsection
 
-# What is Redis? #
+# What is Redis?
 
 !SLIDE center
 
 ![Holy Cow, Radishes!](radish.jpg)
 
-# No, not that! #
+# No, not that!
 
 !SLIDE incremental bullets
 
-# Redis Is... #
+# Redis Is...
 
 * An advanced key-value store
 * Similar to memcached but the dataset is non-volatile...
@@ -31,7 +18,7 @@
 
 !SLIDE incremental bullets
 
-## What kind of datatypes does it support? ##
+## What kind of datatypes does it support?
 
 * Strings
 * Lists
@@ -40,7 +27,7 @@
 
 !SLIDE incremental bullets
 
-# Other interesting basics #
+# Other interesting basics
 
 * Supports master/slave replication
 * Written in ANSI C, easy to compile and install
@@ -49,10 +36,10 @@
 
 !SLIDE incremental bullets
 
-# How fast is Redis? #
+# How fast is Redis?
 
-* Tested with redis-benchmark: 50 simultaneous clients, 100000 requests, using loopback
+* Tested with redis-benchmark
+* 50 simultaneous clients, 100000 requests, using loopback
 * SET and GET with 256 bytes string
 * Linux 2.6 on a it's Xeon X3320 2.5Ghz
 * About 110000 SETs per second, about 81000 GETs per second
-
