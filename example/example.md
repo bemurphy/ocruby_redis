@@ -7,7 +7,7 @@
 # Online Site Presence
 * You've got a site with users
 * Your users have friends
-* Your users what to see if their friends are online
+* Your users want to see if their friends are online
 * You want speed, and aren't in the mood for a web of *SQL fun*.
 
 !SLIDE center transition=fade
@@ -18,7 +18,7 @@
 !SLIDE incremental bullets
 # Redis Data Sets to the Rescue!
 * Have one active set per minute. 
-* On incoming web request, add the user's ID to the active set
+* On an incoming web request, add the user's ID to the active set
 * Union the last 5 sets for a collection of user IDs seen in past 5 minutes.
 
 !SLIDE bullets smaller

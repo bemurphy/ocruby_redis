@@ -14,11 +14,11 @@
 
 * An advanced key-value store
 * Similar to memcached but the dataset is non-volatile...
-* ...distinct from memcached in that it supports advanced data beyond strings
+* ...distinct from memcached in that it supports advanced datatypes beyond strings
 
 !SLIDE incremental bullets
 
-## What kind of datatypes does it support?
+# Datatypes, you say?
 
 * Strings
 * Lists
@@ -88,7 +88,11 @@
 
 ![Redis at Google](google-redis.png)
 
+!SLIDE transition=fade
 
+#Client Support
+
+##**Ruby**, Python, Twisted Python, PHP, Erlang, Tcl, Perl, Lua, Java, Scala, Clojure, C#, C, Javascript/Node.js
 
 !SLIDE incremental bullets transition=scrollLeft smbullets
 

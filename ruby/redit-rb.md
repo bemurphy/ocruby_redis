@@ -30,14 +30,67 @@
     => true
     >> redis.get("foo")
     => "bar"
+        
+!SLIDE transition=fade
+
+# More Ruby Usage
     
-!SLIDE
+!SLIDE code transition=blindX
 
-# List examples...
-TODO
+    @@@RUBY
+	  
+    require 'redis'
+    r = Redis.new
+    r['key_one'] = "value_one"
+    r['key_two'] = "value_two"
 
-!SLIDE
+    r['key_one]  # => "value_one"
+    
+    # Note: values are typed, but all keys 
+    # are strings
+    
+!SLIDE code transition=zoom
 
-# Set examples...
-TODO
+    @@@RUBY
 
+    require 'redis'
+
+    r = Redis.new
+
+    r.delete 'counter'
+
+    r.incr('counter') # => 1
+    r.incr('counter') # => 2
+    r.incr('counter') # => 3
+
+    r.decr('counter') # => 2
+    r.decr('counter') # => 1
+    r.decr('counter') # => 0
+	
+!SLIDE smaller code transition=zoom
+
+    @@@RUBY
+
+    require 'redis'
+
+    r = Redis.new
+
+    r.delete 'foo-tags'
+    r.delete 'bar-tags'
+
+    # create a set of tags on foo-tags
+    r.set_add 'foo-tags', 'one'
+    r.set_add 'foo-tags', 'two'
+    r.set_add 'foo-tags', 'three'
+
+    # create a set of tags on bar-tags
+    r.set_add 'bar-tags', 'three'
+    r.set_add 'bar-tags', 'four'
+    r.set_add 'bar-tags', 'five'
+
+    r.set_members('foo-tags') # => ["three", "two", "one"]
+
+    r.set_members('bar-tags') # => ["four", "three", "five"]
+
+    # intersection of foo-tags and bar-tags
+    r.set_intersect('foo-tags', 'bar-tags') # => ["three"]

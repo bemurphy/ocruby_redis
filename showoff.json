@@ -3,5 +3,6 @@
   {"section": "redis"},
   {"section": "ruby"},
   {"section": "example"},
-  {"section": "wild"}
+  {"section": "wild"},
+  {"section": "conclude"}
 ]
