@@ -1,4 +1,4 @@
-!SLIDE subsection
+!SLIDE subsection transition=cover
 
 # Getting Ruby on Redis
 
@@ -33,5 +33,11 @@
     
 !SLIDE
 
-# More examples...
+# List examples...
 TODO
+
+!SLIDE
+
+# Set examples...
+TODO
+

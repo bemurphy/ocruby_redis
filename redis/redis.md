@@ -1,4 +1,4 @@
-!SLIDE subsection
+!SLIDE subsection transition=cover
 
 # What is Redis?
 
@@ -66,17 +66,12 @@
 # For a full command reference see 
 ## http://code.google.com/p/redis/wiki/CommandReference
 
-!SLIDE incremental bullets
+!SLIDE incremental bullets transition=fade
 
 # So what's cool about this?
 * It's very fast.
 * It often closely models our beloved Ruby classes; think Array#pop, shift, +, etc.
 * May require less cognitive overhead for some tasks.
-
-!SLIDE
-
-# Not quite there yet
-TODO
 
 !SLIDE bullets
 
@@ -93,13 +88,15 @@ TODO
 
 ![Redis at Google](google-redis.png)
 
+
+
 !SLIDE incremental bullets transition=scrollLeft smbullets
 
 # How fast is Redis?
 ###*or, why people like Redis
 
 * Tested with redis-benchmark
-* 50 simultaneous clients, 100000 requests, using loopback
+* 50 simultaneous clients, 100,000 requests, using loopback
 * SET and GET with 256 bytes string
 * Linux 2.6 on a Xeon X3320 2.5Ghz
 * About 110,000 SETs per second, and 81,000 GETs per second
@@ -112,6 +109,15 @@ TODO
 * Written in ANSI C, easy to compile and install
 * Past work sponsored by Engine Yard & Citrusbyte
 * Currently sponsored by VMWare
+
+!SLIDE bullets smbullets incremental
+
+# Future enhancements
+
+* Currently, sharding is accomplished via consistent hashing.
+* However, this makes it tough/impossible to add servers into the mix.
+* Redis cluster will support adding and removing nodes while the system is running.
+* Cluster is the top priority after the release of Redis 2.0.
 
 !SLIDE bullets incremental
 
