@@ -15,7 +15,7 @@
 
 # About Me #
 
-* For anyone new, I'm Brendon Murphy
+* I'm Brendon Murphy
 * http://github.com/bemurphy
 * @xternal twitter
 

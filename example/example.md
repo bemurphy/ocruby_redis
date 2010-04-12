@@ -62,17 +62,28 @@
       redis.sadd(key, id)
     end
     
-!SLIDE code
+    # Don't forget to set a cron and clear out 
+    # sets from the the previous hour.
+    
+!SLIDE code small
 
     @@@RUBY
 
     # Who's online
 
+    # Generate a union of all user ids from
+    # the past 5 minutes.
     def online_user_ids
       redis.sunion(*keys_in_last_5_minutes)
     end
 
     def online_friend_ids(interested_user_id)
-      redis.sunionstore("online_users", *keys_in_last_5_minutes)
-      redis.sinter("online_users", "user:#{interested_user_id}:friend_ids")
+      # Store all ids from last 5 minutes in 1 set
+      redis.sunionstore("online_users", 
+        *keys_in_last_5_minutes)
+
+      # Check the intersection between online users
+      # and the set of a user's friends.
+      redis.sinter("online_users",
+          "user:#{interested_user_id}:friend_ids")
     end

@@ -55,14 +55,18 @@
 
     require 'redis'
 
+    # Connect to local server
     r = Redis.new
 
+    # Make sure it's zeroed
     r.delete 'counter'
 
+    # Count up...
     r.incr('counter') # => 1
     r.incr('counter') # => 2
     r.incr('counter') # => 3
 
+    # And count down...
     r.decr('counter') # => 2
     r.decr('counter') # => 1
     r.decr('counter') # => 0
@@ -87,10 +91,14 @@
     r.set_add 'bar-tags', 'three'
     r.set_add 'bar-tags', 'four'
     r.set_add 'bar-tags', 'five'
+    r.set_add 'bar-tags', 'five' # Not a typo, it's a set!
 
     r.set_members('foo-tags') # => ["three", "two", "one"]
 
     r.set_members('bar-tags') # => ["four", "three", "five"]
 
-    # intersection of foo-tags and bar-tags
+    # Unions & Intersections
+    r.set_union('foo-tags', 'bar-tags') 
+      # => ["four", "three", "five", "two", "one"]
     r.set_intersect('foo-tags', 'bar-tags') # => ["three"]
+    

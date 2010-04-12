@@ -25,6 +25,10 @@
 * Sets
 * Sorted sets
 
+!SLIDE center transition=blindX
+
+# Sampling of Redis Commands
+
 !SLIDE incremental bullets smbullets
 
 # Operating on Strings
