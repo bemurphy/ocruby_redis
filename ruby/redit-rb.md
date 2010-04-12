@@ -30,3 +30,8 @@
     => true
     >> redis.get("foo")
     => "bar"
+    
+!SLIDE
+
+# More examples...
+TODO

@@ -34,8 +34,8 @@
 * **GETSET** - set a key to a string returning the old value
 * **MGET** - multi-get, return the values of multiple keys
 * **SETNX** - set a key to a string value if the key does not exist
-* **INCR** - increment the integer value of key, atomically
-* **DECR** - decrement the integer value of key, atomically
+* **INCR** - increment the integer value of key (atomically) 
+* **DECR** - decrement the integer value of key (atomically)
 ## ...and more!
 
 !SLIDE incremental bullets smbullets
@@ -53,20 +53,13 @@
 
 # Operating on Sets
 
-* SADD key member Add the specified member to the Set value at key
-* SREM key member Remove the specified member from the Set value at key
-* SPOP key Remove and return (pop) a random element from the Set value at key
-* SMOVE srckey dstkey member Move the specified member from one Set to another atomically
-* SCARD key Return the number of elements (the cardinality) of the Set at key
-* SISMEMBER key member Test if the specified value is a member of the Set at key
-* SINTER key1 key2 ... keyN Return the intersection between the Sets stored at key1, key2, ..., keyN
-* SINTERSTORE dstkey key1 key2 ... keyN Compute the intersection between the Sets stored at key1, key2, ..., keyN, and store the resulting Set at dstkey
-* SUNION key1 key2 ... keyN Return the union between the Sets stored at key1, key2, ..., keyN
-* SUNIONSTORE dstkey key1 key2 ... keyN Compute the union between the Sets stored at key1, key2, ..., keyN, and store the resulting Set at dstkey
-* SDIFF key1 key2 ... keyN Return the difference between the Set stored at key1 and all the Sets key2, ..., keyN
-* SDIFFSTORE dstkey key1 key2 ... keyN Compute the difference between the Set key1 and all the Sets key2, ..., keyN, and store the resulting Set at dstkey
-* SMEMBERS key Return all the members of the Set value at key
-* SRANDMEMBER key Return a random member of the Set value at key
+* **SADD**/**SREM** - add/remove the specified member to the set value at key
+* **SISMEMBER** - test if the specified value is a member of the set at key
+* **SINTER** - intersection between the sets stored at key1, key2, ...keyN
+* **SUNION** - return the union between the sets stored
+* **SDIFF** - return the difference between the sets
+* **SRANDMEMBER** - a random member of the set value at key
+## ... :iceberg => "tip"
 
 !SLIDE small
 
@@ -76,9 +69,22 @@
 !SLIDE incremental bullets
 
 # So what's cool about this?
-* It's fast.
+* It's very fast.
+* It often closely models our beloved Ruby classes; think Array#pop, shift, +, etc.
 * May require less cognitive overhead for some tasks.
-* It more closes models our beloved Ruby classes, like Array#pop, slice, shift, etc.
+
+!SLIDE
+
+# Not quite there yet
+TODO
+
+!SLIDE bullets
+
+# Running Redis
+
+* Linux, BSD, Mac OS X, Solaris
+* No official support for Windows
+* Root privs not needed to get started
 
 !SLIDE center
 
@@ -86,15 +92,6 @@
 ### Also on github: http://github.com/antirez/redis
 
 ![Redis at Google](google-redis.png)
-
-!SLIDE incremental bullets
-
-# Other points of interest
-
-* Supports master/slave replication
-* Written in ANSI C, easy to compile and install
-* Past work sponsored by Engine Yard & Citrusbyte
-* Currently sponsored by VMWare
 
 !SLIDE incremental bullets transition=scrollLeft smbullets
 
@@ -106,3 +103,23 @@
 * SET and GET with 256 bytes string
 * Linux 2.6 on a Xeon X3320 2.5Ghz
 * About 110,000 SETs per second, and 81,000 GETs per second
+
+!SLIDE incremental bullets
+
+# Other points of interest
+
+* Supports master/slave replication
+* Written in ANSI C, easy to compile and install
+* Past work sponsored by Engine Yard & Citrusbyte
+* Currently sponsored by VMWare
+
+!SLIDE bullets incremental
+
+# Who is using Redis?
+
+* Engine Yard
+* Craigslist
+* Guardian.uk
+* Ruby Minds
+* Github
+* You?
