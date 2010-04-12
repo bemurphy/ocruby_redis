@@ -22,8 +22,8 @@
 !SLIDE
 
 # Presentation Notes
-### Browse the slides at <u>http://192.168.0.101:9090</u>
+### Browse the slides at http://192.168.0.101:9090
 ## OR
-### Download from <u>http://github.com/bemurphy/ocruby_redis</u>
+### Download from http://github.com/bemurphy/ocruby_redis
 ## OR
-### View online at from <u>http://ocruby-redis.heroku.com</u>
+### View online at from http://ocruby-redis.heroku.com

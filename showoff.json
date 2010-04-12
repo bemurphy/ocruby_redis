@@ -2,5 +2,6 @@
   {"section": "intro"},
   {"section": "redis"},
   {"section": "ruby"},
-  {"section": "example"}
+  {"section": "example"},
+  {"section": "wild"}
 ]

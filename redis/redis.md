@@ -2,7 +2,7 @@
 
 # What is Redis?
 
-!SLIDE center
+!SLIDE center transition=scrollUp
 
 ![Holy Cow, Radishes!](radish.jpg)
 
@@ -27,14 +27,14 @@
 
 !SLIDE incremental bullets
 
-# Other interesting basics
+# Other points of interest
 
 * Supports master/slave replication
 * Written in ANSI C, easy to compile and install
 * Past work sponsored by Engine Yard & Citrusbyte
 * Currently sponsored by VMWare
 
-!SLIDE incremental bullets
+!SLIDE incremental bullets transition=scrollLeft
 
 # How fast is Redis?
 
