@@ -107,7 +107,7 @@
 
 #Client Support
 
-##**Ruby**, Python, Twisted Python, PHP, Erlang, Tcl, Perl, Lua, Java, Scala, Clojure, C#, C, Javascript/Node.js
+##**Ruby**, Python, Twisted Python, PHP, Erlang, Tcl, Perl, Lua, Java, Scala, Clojure, Haskell, C#, C, Javascript/Node.js
 
 !SLIDE incremental bullets
 
